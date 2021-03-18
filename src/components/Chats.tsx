@@ -5,13 +5,10 @@ import { Chat } from './index';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      width: '100%',
-      maxWidth: '36ch',
-      backgroundColor: theme.palette.background.paper,
-    },
-    inline: {
-      display: 'inline',
+    chats: {
+      height: 500,
+      padding: '0',
+      overflow: 'auto',
     },
   })
 );
@@ -20,7 +17,7 @@ const Chats = (props: { chats: any[] }) => {
   const classes = useStyles();
 
   return (
-    <List className={classes.root}>
+    <List className={classes.chats}>
       {props.chats.map((chat, index) => {
         return (
           <Chat text={chat.text} type={chat.type} key={index.toString()} />
