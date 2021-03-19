@@ -3,7 +3,7 @@ const defaultDataset = {
     answers: [
       { content: '仕事を依頼したい', nextId: 'job_offer' },
       {
-        content: '現在の学習状況について',
+        content: 'エンジニアのキャリアについて相談したい',
         nextId: 'consultant',
       },
       { content: '学習コミュニティについて知りたい', nextId: 'community' },
@@ -52,11 +52,14 @@ const defaultDataset = {
   consultant: {
     answers: [
       {
-        content: 'Blogを見る',
-        nextId: '#',
+        content: 'YouTubeで動画を見る',
+        nextId: 'https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w',
       },
+      { content: '学習コミュニティについて知りたい', nextId: 'community' },
       { content: '最初の質問に戻る', nextId: 'init' },
     ],
+    question:
+      'トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。',
   },
   community: {
     answers: [
